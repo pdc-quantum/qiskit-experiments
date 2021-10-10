@@ -146,7 +146,7 @@ class RBAnalysis(curve.CurveAnalysis):
             label="fit_ready",
             x=mean_x,
             y=mean_y,
-            y_err=mean_e,
+            y_err=mean_e / np.sqrt(data.y.size/np.unique(data.x).size),
             data_index=mean_data_index,
         )
 
